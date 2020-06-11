@@ -73,6 +73,7 @@ body {
 .burgerHolder {
     display: flex;
     flex-direction: row;
+    margin: .6em 0;
 }
 
 .burgerColumn {

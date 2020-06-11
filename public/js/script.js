@@ -11,9 +11,9 @@ $(document).ready(() => {
         })
     })
 
-    $('.devour').on('click', (event) => {
+    $(document).on('click', '.devour', (event) => {
         event.preventDefault();
-        let btnId = event.target;
+        let btnId = $(this).data("id");
         console.log(btnId);
     })
 })
