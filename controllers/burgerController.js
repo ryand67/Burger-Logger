@@ -18,4 +18,10 @@ router.post('/api/burger', (req, res) => {
     })
 })
 
+router.put('/api/burger/update', (req, res) => {
+    burger.update(req.body, (data) => {
+        
+    })
+})
+
 module.exports = router;
