@@ -2,14 +2,14 @@ const connection = require('./connection');
 
 const orm = {
     selectAll: function(cb) {
-        connection.query('SELECT * FROM burgers', (err, result) => {
+        connection.query('SELECT * FROM burger', (err, result) => {
             if(err) throw err;
             cb(result);
         })
     },
 
     insertOne: function(input, cb) {
-        connection.query('INSERT INTO burgers SET ?', {name: input}, (err, result) => {
+        connection.query('INSERT INTO burger SET ?', {name: input}, (err, result) => {
             if(err) throw err;
             cb(result);
         })

@@ -1,8 +1,5 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
-const orm = require('./config/orm');
-
-console.log(orm.selectAll());
 
 const app = express();
 
