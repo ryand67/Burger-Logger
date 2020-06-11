@@ -12,4 +12,10 @@ router.get('/', (req, res) => {
     })
 })
 
+router.post('/api/burger', (req, res) => {
+    burger.insert(req.body, (data) => {
+        res.json(data);
+    })
+})
+
 module.exports = router;

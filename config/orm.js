@@ -9,7 +9,7 @@ const orm = {
     },
 
     insertOne: function(input, cb) {
-        connection.query('INSERT INTO burger SET ?', {name: input}, (err, result) => {
+        connection.query('INSERT INTO burger SET ?', input, (err, result) => {
             if(err) throw err;
             cb(result);
         })

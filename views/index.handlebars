@@ -1,3 +1,30 @@
-{{#each burger}}
-    <p>{{name}}</p>
-{{/each}}
+
+<div class="burgerDiv">
+    <div class="burgerColumn">
+    <h1>Not Devoured</h1>
+    {{#each burger}}
+        {{#unless devoured}}
+            <div class="burgerHolder">
+                <p>{{name}}</p>
+                <button class="devour" data-id="{{id}}">Devour</button>
+            </div>
+        {{/unless}}
+    {{/each}}
+    </div>
+
+    <div class="burgerColumn">
+    <h1>Devoured</h1>
+    {{#each burger}}
+        {{#if devoured}}
+        <div class="burgerHolder">
+            <p>{{name}}</p>
+        </div>
+        {{/if}}
+    {{/each}}
+    </div>
+</div>
+
+<form action="" id="createForm">
+    <input type="text" id="formInput">
+    <button type="submit" id="submitBtn">Submit</button>
+</form>
