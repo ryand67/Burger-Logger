@@ -14,13 +14,19 @@ router.get('/', (req, res) => {
 
 router.post('/api/burger', (req, res) => {
     burger.insert(req.body, (data) => {
-        res.json(data);
+        let holder = {
+            burger: data
+        }
+        res.render('index', holder);
     })
 })
 
 router.put('/api/burger/update', (req, res) => {
     burger.update(req.body, (data) => {
-        
+        let holder = {
+            burger: data
+        }
+        res.render('index', holder);
     })
 })
 

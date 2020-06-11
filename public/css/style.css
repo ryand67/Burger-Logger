@@ -51,6 +51,7 @@ body {
 #submitBtn {
     padding: 1em;
     background-color: white;
+    border: 2px solid white;
     color: var(--main-orange);
     font-weight: bold;
     outline: none;
@@ -61,8 +62,11 @@ body {
 }
 
 #submitBtn:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: .15s ease-in-out;
+    color: white;
+    background-color: var(--main-orange);
+    border:  2px solid white;
 }
 
 .burgerDiv {

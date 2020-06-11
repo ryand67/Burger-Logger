@@ -4,11 +4,13 @@ $(document).ready(() => {
         let holder = {
             name: $('#formInput').val().trim()
         }
-        
+
         $.ajax({
             url: '/api/burger',
             method: 'POST',
             data: holder
+        }).then(() => {
+            location.reload();
         })
     })
 
@@ -22,6 +24,8 @@ $(document).ready(() => {
             url: '/api/burger/update',
             method: 'PUT',
             data: btnId
+        }).then(() => {
+            location.reload();
         })
     })
 })
