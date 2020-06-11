@@ -1,6 +1,8 @@
 const express = require('express');
-const mysql = require('mysql');
 const exphbs = require('express-handlebars');
+const orm = require('./config/orm');
+
+console.log(orm.selectAll());
 
 const app = express();
 
@@ -12,17 +14,9 @@ app.use(express.json());
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
-const connection = mysql.createConnection({
-    user: 'root',
-    host: 'localhost',
-    port: 3306,
-    password: 'rootroot',
-    database: 'burger_db'
-})
+const routes = require('./controllers/burgerController.js')
 
-connection.connect(() => {
-    
-})
+app.use(routes);
 
 app.listen(PORT, (err) => {
     if(err) throw err;
