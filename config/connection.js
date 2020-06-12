@@ -1,6 +1,6 @@
 //Require mysql
 const mysql = require('mysql');
-const connection;
+let connection;
 
 //Connection to databse properties
 if(process.env.JAWSDB_URL) {
