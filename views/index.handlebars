@@ -2,6 +2,7 @@
 <div class="burgerDiv">
     <div class="burgerColumn">
     <h1>Not Devoured</h1>
+    {{!-- For each burger, check if it's devoured or not, and put it in the associated row --}}
     {{#each burger}}
         {{#unless devoured}}
             <div class="burgerHolder">
